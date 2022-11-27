@@ -45,7 +45,7 @@ def get_pet_labels(image_dir):
     results_dic = dict()
 
     for filename in filenames:
-        if filename[0] != ".":
+        if not filename.startswith("."):
             low_pet_name = filename.lower()
             word_list_pet_image = low_pet_name.split("_")
             pet_name = ""
